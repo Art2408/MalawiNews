@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block content %}
+<main>
+    <section class="delete-wrapper">
+        <div class="delete-card">
+                <div class="delete-photo">
+                    {% if news.Picture %}
+                        <img src="{{news.Picture.url}}" alt="">
+                    {% endif %}
+                </div>
+                <div class="delete-text">
+                    <h2>{{news.Title|truncatewords:8}}</h2>
+                    <p>{{news.Story|truncatewords:30}}</p>
+                </div>
+                <div class="delete-btn">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <button class="delete">Delete</button>
+                    </form>
+                    <a href="{% url 'profile' %}">
+                        <button class="cancel">Discard</button>
+                    </a>
+                </div>
+        </div>
+    </section>
+</main>
+{% endblock  %}

@@ -1,0 +1,46 @@
+{% block  content %}
+{% load static %}
+<nav>
+    <div class="logo">
+      <a href="">Malawi <span>News</span></a>
+    </div>
+    <div class="links">
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'latest-news' %}">Latest News</a></li>
+        <li><a href="{% url 'cartegory' %}">Cartegories</a></li>
+        <li><a href="">About Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-btn" id="mobile-btn" >
+      <button id="show-nav">
+        <img src="{% static 'icon/menu-burger.svg' %}" width="20px"  alt="">
+      </button>
+    </div>
+    <div class="nav-btn">
+      <button>
+        {% if request.user%}
+        <a href="{% url 'sign-up' %}">Sign Up for Free</a>
+        {% else %}
+        <a href="{% url 'log-out' %}">Log Out</a>
+        {% endif %}
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <button class="close-btn" id="close-nav">
+        <img src="{% static 'icon/cross.svg' %}" alt="">
+      </button>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'latest-news' %}">Latest News</a></li>
+        <li><a href="{% url 'cartegory' %}">Cartegories</a></li>
+        <li><a href="">About Us</a></li>
+      </ul>
+      <div class="mobile-nav-btn">
+        <button>
+          <a href="{% url 'sign-up' %}">Sign Up for Free</a>
+        </button>
+      </div>
+    </div>
+  </nav>
+{% endblock  %}

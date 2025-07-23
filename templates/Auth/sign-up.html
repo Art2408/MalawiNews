@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+{% block content %}
+<section class="auth-wrapper">
+    <div class="auth-form">
+        <div class="auth-text">
+            <h2>Sign Up with Malawi News</h2>
+        </div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="input-wrapper">
+                <label for="">Username</label>
+                <input type="text" name="username" placeholder="Enter your username">
+            </div>
+            <div class="input-wrapper">
+                <label for="">Email</label>
+                <input type="text" name="email" placeholder="Enter your username">
+            </div>
+            <div class="input-wrapper">
+                <label for="">Password</label>
+                <input type="password" name="password1" placeholder="Enter your password">
+            </div>
+            <div class="input-wrapper">
+                <label for="">Confirm Password </label>
+                <input type="password" name="password2" placeholder="Confirm your password">
+            </div>
+            <div class="auth-btn">
+                <button class="active-btn">Create Account</button>
+                <button class="other-btn">
+                    <a href="{% url 'log-in' %}">Log In</a>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock  %}

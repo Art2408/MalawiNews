@@ -1,0 +1,193 @@
+@media screen and (max-width:470px){
+    nav .links ul{
+        display: none;
+    }
+    nav .nav-btn{
+        display: none;
+    }
+    nav .mobile-btn{
+        display: block;
+    }
+    .container{
+        padding: 0px;
+    }
+    .latest{
+        width: 100%;
+        
+    }
+    .latest-wrapper{
+        display: block;
+        width: 100%;
+    }
+    .profile-news-card{
+        margin: 10px auto;
+    }
+    .news-photo{
+        width: 100%;
+    }
+    .news-text{
+        width: 95%;
+    }
+    .news-text h2{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .news-text p{
+        font-size: 14px;
+        
+    }
+    .news-text h4{
+        font-size: 14px;
+    }
+    
+    .latest-btn{
+        padding: 5px;
+    }
+    .main-news{
+        display: block;
+        width: 100%;
+    }
+    .news-wrapper{
+        width: 100%;
+        padding: 0px;
+    }
+    .news-card{
+        display: block;
+        width: 90%;
+        padding: 4px;
+        margin: 10px auto;
+    }
+    .news-card .card-image{
+        width: 100%;
+        padding: 0px;
+    }
+    .news-card img{
+        width: 100%;
+    }
+    .news-btn{
+        padding: 5px 10px;
+    }
+    .text{
+        width: 100%;  
+    }
+    .text h2{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .text p{
+        font-size: 14px;
+    }
+    aside{
+        width: 90%;
+        padding: 4px;
+        margin: 10px auto;
+    }
+    .top-card{
+        width: 90%;
+        margin: 10px auto;
+    }
+    footer .subscriber-wrapper{
+        padding: 10px 5px ;
+    }
+    .subscriber-form{
+        width: 100%;
+    }
+
+
+    /* ------------------ latest page media style---------------------- */
+    .latest-hero{
+        padding: 2rem 0px;
+        
+    }
+    .search-wrapper .search-bar{
+        width: 100%;
+        /* display: block; */
+        padding: 0px;
+        
+    }
+    .search-bar button{
+        padding:10px 5px;
+        
+    } 
+    .main-latest-card{
+        display: block;
+    }
+    .latest-news-img{
+        width: 100%;
+        height: 200px;
+    }
+    .latest-news-img img{
+        width: 100%;
+        height: 200px;
+    }
+
+    /* ----------------------- the styles of cartegory media -------------------- */
+    .cartegory .cart-card h2{
+        font-size: 14px;
+        line-height: 5px;
+    }
+
+
+    .profile-text h2{
+        font-size: 18px;
+    }
+    .news-title {
+        display: block;
+    }
+    .news-title button{
+        padding: 5px 10px;
+        outline: none;
+    }
+
+    .cartegory-list {
+        flex-wrap: wrap;
+    }
+    .cartegory-list .cartegory-list-card{
+        padding:5px 10px;
+    }
+    .cartegory-list .cartegory-list-card p{
+        line-height: 5px;
+        font-size: 16px;
+    }
+    .create-cartegory{
+        width: 100%;
+    }
+    .cartegory-create-text h4{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .news-form-container{
+        padding: 10px;
+    }
+    .news-form{
+        width: 100%;
+    }
+
+    .news-page-container{
+        display: block;
+    }
+    .news-page img{
+        height: 200px;
+    }
+
+    .auth-form{
+        height: 100%;
+        padding: 10px;
+    }
+    .input-wrapper{
+        padding: 5px 0px;
+    }
+    .auth-wrapper .auth-btn{
+        /* display: block; */
+    }
+    .auth-wrapper .auth-btn button{
+        font-size: 16px;
+    }
+    .auth-wrapper .auth-btn .active-btn{
+        padding: 12px 20px;
+    }
+    .auth-wrapper .auth-btn .other-btn{
+        padding: 10px 20px;
+    }
+
+}

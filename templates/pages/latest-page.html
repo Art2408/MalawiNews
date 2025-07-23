@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block content %}
+<header>
+    {% include "constants/navbar.html" %}
+</header>
+<main>
+    <section class="main-latest">
+        <div class="title">
+            <h1>Latest News</h1>
+        </div>
+        <div class="main-latest-page">
+            <div class="main-latest-wrap">
+                {% for item in latest %}
+                <a href="{% url 'latest-story' item.id %}">
+                    <div class="main-latest-card">
+                        <div class="latest-news-img">
+                            <img src="{{item.Picture.url}}" alt="">
+                        </div>
+                        <div class="text">
+                            <h2>{{item.Title|truncatewords:10}}</h2>
+                            <p>{{item.Story|truncatewords:50}}</p>
+                            <h4>{{item.Created|timesince}}</h4>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
+{% include "constants/footer.html" %}
+{% endblock  %}

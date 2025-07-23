@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block  content %}
+<main>
+    <section class="news-form-container">
+        <div class="news-form">
+            <div class="news-form-title">
+                <h2>Create Latest News</h2>
+            </div>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input">
+                    <label for="">Title</label>
+                    <input type="text" name="title" placeholder="write the title of the news">
+                </div>
+                <div class="input">
+                    <label for="">Image</label>
+                    <input type="file" name="image">
+                </div>
+                <div class="input">
+                    <label for="">Story</label>
+                    <textarea name="story" id="" placeholder="write the full story"></textarea>
+                </div>
+                <div class="form-btn">
+                    <button>Create News</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock  %}

@@ -1,0 +1,112 @@
+{% extends "index.html" %}
+{% block content %}
+<header>
+    {% include "constants/navbar.html" %}
+    <section class="hero-container">
+        <div class="hero-wrap">
+          <h1>KNOW EXACTLY WHAT IS HAPPENING</h1>
+          <h2>GET LATEST NEWS HAPPEN IN MALAWI</h2>
+
+          <div class="hero-btn">
+            
+            <button class="sign-btn">
+              <a href="{% url 'sign-up' %}">Sign Up for free</a>
+            </button>
+            
+            <button class="try-btn">
+              <a href="{% url 'profile' %}">Create Story</a>
+            </button>
+          </div>
+        </div>
+      </section>
+</header>
+<main>
+    <section class="container latest">
+      <div class="title">
+        <h1>Latest News</h1>
+      </div>
+      <div class="latest-wrapper">
+       {% for item in latest %}
+       <div class="profile-news-card">
+        <a href="{% url 'latest-story' item.id %}">
+          <div class="news-photo">
+            {% if item.Picture %}
+              <img src="{{item.Picture.url}}" alt="" />
+            {% endif %}
+          </div>
+          <div class="news-text">
+              <h2>{{item.Title|truncatewords:8}}</h2>
+                  <p>{{item.Story|truncatewords:10}}</p>
+                  <h4>{{item.Created|timesince}}</h4>
+          </div>
+        </a>
+    </div>
+       {% endfor %}
+      </div>
+      <div class="latest-btn">
+        <a href="{% url 'latest-news' %}">
+          <button>Explore More</button>
+        </a>
+      </div>
+    </section>
+    <section class="container main-news">
+      <section class="news-wrapper">
+        <div class="title">
+          <h1>Main News</h1>
+        </div>
+        <div class="news-wrap">
+          {% for item in news %}
+          <a href="{% url 'story-news' item.id%}">
+            <div class="news-card">
+              <div class="card-image">
+                {% if item.Picture %}
+                  <img src="{{item.Picture.url}}" alt="" />
+                {% endif %}
+              </div>
+              <div class="text">
+                <h2>{{item.Title|truncatewords:8}}</h2>
+                <p>{{item.Story|truncatewords:20}}</p>
+                <h4>{{item.Created|timesince}}</h4>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+        <div class="news-btn">
+          <a href="{% url 'news-story' %}">
+            <button>Explore More</button>
+          </a>
+        </div>
+      </section>
+      <aside>
+        <div class="title">
+          <h1>Top Stories</h1>
+        </div>
+        <div class="top-wrapper">
+          <div class="top-card">
+            <h2>Malawi has introduce new ways of paying tax</h2>
+            <p>
+              Lorem ipsum dolor sit, erspiciatis sunt rem in, asperiores
+              fugiat...
+            </p>
+          </div>
+          <div class="top-card">
+            <h2>Malawi has introduce new ways of paying tax</h2>
+            <p>
+              Lorem ipsum dolor sit, erspiciatis sunt rem in, asperiores
+              fugiat...
+            </p>
+          </div>
+          <div class="top-card">
+            <h2>Malawi has introduce new ways of paying tax</h2>
+            <p>
+              Lorem ipsum dolor sit, erspiciatis sunt rem in, asperiores
+              fugiat...
+            </p>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+  {% include "constants/footer.html" %}
+{% endblock  %}

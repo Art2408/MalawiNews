@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% block content %}
+<header>
+    {% include "constants/navbar.html" %}
+</header>
+<main>
+    <section class="news-page-container">
+        <section class="news-container">
+            <div class="news-page">
+                <img src="{{news.Picture.url}}" alt="">
+                <div class="news-text">
+                    <h2>{{news.Title}}</h2>
+                    <h4>{{news.Created|timesince}}</h4>
+                    <p>{{news.Story|linebreaks}}</p>
+                        
+                </div>
+            </div>
+        </section>
+        <aside>
+            <div class="title">
+                <h1>Related Stories</h1>
+            </div>
+            <div class="top-wrapper">
+                {% for item in related_news %}
+                <a href="{% url 'story-news' item.id %}">
+                  <div class="top-card">
+                    <h2>{{item.Title|truncatewords:8}}</h2>
+                    <p>{{item.Story|truncatewords:10}}</p>
+                  </div>
+                </a>
+                {% endfor %}
+              </div>
+    
+        </aside>
+    </section>
+</main>
+{% include "constants/footer.html" %}
+{% endblock  %}

@@ -1,0 +1,1228 @@
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    /* padding: 0px 20px; */
+    justify-content: space-between;
+    width: 100%;
+    background-color:black;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    padding: 7px 0px 7px 20px;
+}
+nav .logo a{
+    color:green;
+    font-size: 20px;
+    font-weight: 600;
+}
+nav .logo span{
+    color:red;
+}
+nav .links ul{
+    display: flex;
+    gap: 20px;
+}
+nav .links li a{
+    font-size: 16px;
+    font-weight: 500;
+    color:#f4f4f4;
+    transition: all 300ms ease-in;
+}
+nav .links a:hover{
+    color:green;
+}
+
+nav .nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px 0px 0px;
+}
+
+nav .nav-btn button{
+    padding: 10px 20px;
+    border:none;
+    border-radius: 10px;
+    background-color: green;
+    transition: all 300ms ease-in;
+}
+
+nav .nav-btn button a{
+    color:#fff;
+}
+nav .nav-btn button:hover{
+    background-color: rgb(25, 58, 9);
+}
+nav .mobile-btn {
+    padding: 5px;
+    display: none;
+}
+nav .mobile-btn button{
+    padding: 5px 10px;
+    border: none;
+    background-color: green;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav .mobile-btn button img{
+    width: 25px;
+    height: 25px;
+    
+    
+}
+nav .mobile-nav{
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+}
+nav .mobile-nav ul li{
+    padding: 10px;
+}
+nav .mobile-nav ul li a{
+    color: green;
+    font-size: 18px;
+    font-weight: 600;
+}
+nav .mobile-nav .mobile-nav-btn{
+    padding: 0px 2.2rem;
+}
+nav .mobile-nav .mobile-nav-btn button{
+    padding: 10px 20px;
+    border: none;
+    background-color: green;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+nav .mobile-nav .mobile-nav-btn button a{
+    color: #fff;
+}
+
+nav .mobile-nav .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+}
+nav .mobile-nav .close-btn img{
+    width: 20px;
+    height: 20px;
+}
+
+header .hero-container{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4)) ,url("/static/LocalImages/bg-img.jpg");
+    display: flex;
+    justify-content: center;
+
+}
+header .hero-container .hero-wrap{
+    padding: 8rem 20px 4rem;
+    max-width: 600px;
+}
+.hero-container .hero-wrap h1{
+    color:#f4f4f4;
+    text-align: center;
+    font-size: 30px;
+}
+.hero-container .hero-wrap h2{
+    font-size: 20px;
+    text-align: center;
+    color: red;
+
+}
+.hero-btn{
+    display: flex;
+    justify-content: space-around;
+}
+.hero-container .hero-wrap button{
+    padding:10px 20px;
+    border-radius:20px;
+    font-size: 16px;
+    color:#fff;
+    cursor: pointer;
+    margin: 2rem auto;
+    transition: all 300ms ease-in;
+}
+.hero-wrap .sign-btn{
+    border:1.5px solid green;
+    background-color: transparent;
+}
+.hero-wrap .sign-btn a{
+    font-size: 16px;
+    color:#fff;
+}
+.hero-wrap button{
+    border:1.5px solid green;
+    background-color: green;
+}
+.hero-wrap button a{
+    font-size: 16px;
+    color:#fff;
+}
+
+.hero-container .hero-wrap button:hover{
+    transform: scale(1.05);
+}
+
+
+
+.title h1{
+    color: green;
+    font-size: 22px;
+}
+.title h2{
+    color: red;
+    font-size: 20px;
+}
+
+/* ---------------- home page styles ----------------------- */
+.container{
+    padding: 2rem;
+}
+.latest-wrapper{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.latest-card{
+    width: 250px;
+    background-color: #f4f4f4;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.latest-card img{
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 10px;
+}
+.latest-card  .text{
+    width: 100%;
+}
+.latest-card  .text h2{
+    color: rgba(0,0,0,0.7);
+    font-size: 18px;
+}
+.latest-btn{
+    padding:  2rem;
+}
+.latest-btn button{
+    padding:10px 20px;
+    border: none;
+    background-color: #2d425c;
+    cursor:pointer;
+    color:#fff;
+    font-size:16px;
+    border-radius:5px;
+}
+.main-news{
+    display: flex;
+    gap:20px;
+}
+.news-wrapper{
+    background-color: #e2e2e2;
+    width: 1000px;
+    flex: 1;
+    padding: 10px;
+}
+.news-card{
+    width: 700px;
+    display: flex;
+    gap:20px;
+    background-color: #f4f4f4;
+    padding:10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+.news-card .card-image{
+    width: 350px;
+    height: 200px;
+    background-color: #3a4837;
+    border-radius: 10px;
+}
+.news-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.news-btn{
+    padding: 1rem 0px;
+}
+.news-btn button{
+    padding:10px 20px;
+    border: none;
+    background-color: #2d425c;
+    cursor:pointer;
+    color:#fff;
+    font-size:16px;
+    border-radius:5px;
+}
+aside{
+    width: 400px;
+    background-color: #2d425c;
+    padding: 10px;
+}
+.top-card{
+    /* box-shadow: 2px 0px 2px 3px rgba(0,0,0,0.3); */
+    border-radius: 10px;
+    padding:  4px;
+    border: 1.5px solid #fff;
+    margin: 10px 0px;
+    transition: all 300ms ease-in;
+}
+.top-card:hover h2{
+    color: green;
+}
+.top-card h2{
+    line-height: 20px;
+    font-size: 18px;
+    color:#faf9f6;
+}
+.top-card p{
+    color:#faf9f6;
+}
+
+
+
+
+
+.main-latest{
+    padding: 4rem 2rem 2rem ;
+    background-color: #f4f4f4;
+}
+
+.main-latest-card{
+    background-color: #fff;
+    display: flex;
+    gap:20px;
+    padding: 20px;
+    margin: 20px 0px;
+}
+.latest-news-img{
+    width: 400px;
+    height: 300px;
+    background-color: #3a4837;
+    border-radius: 10px;
+}
+.latest-news-img img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.text{
+    width: 500px;
+}
+.text h2{
+    color: green;
+}
+.text p{
+    color: #333;
+    font-size: 17px;
+    font-weight: 600;
+}
+.text h4{
+    color: rgba(0,0,0,0.6);
+    line-height: 20px;
+}
+
+/* ----------------- profile styles -------------------------- */
+.profile-container{
+    padding: 2rem;
+    /* background-color: #f4f4f4; */
+}
+.profile-info-container{
+    padding: 20px 20px 4rem;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+}
+.profile-card{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.profile-avatar{
+    background-color: #2c2259;
+    width: 150px;
+    border-radius: 50%;
+    /* aspect-ratio: 1/1; */
+    height: 150px;
+}
+.profile-avatar img{
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-avatar p{
+    text-align: center;
+    color:#fff;
+
+}
+.profile-text h2{
+    color: green;
+    line-height: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.profile-text h3{
+    color: rgba(0,0,0,0.6);
+    line-height: 10px;
+    text-transform: lowercase;
+}
+.profile-text .update-btn button{
+    padding:12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    cursor: pointer;
+    color:#fff;
+    transition: all 300ms ease-in;
+}
+.profile-text .update-btn button:hover{
+    background-color: rgb(25, 58, 9);
+}
+
+.profile-update-wrapper{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 500px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+    display: none;
+}
+.profile-update-wrapper .input{
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+}
+.profile-update-wrapper .input label{
+    color: green;
+    padding: 4px 0px;
+    font-weight: 600;
+}
+.profile-update-wrapper .input input{
+    padding: 10px 20px;
+    border: 1.5px solid silver;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+.close-bnt{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: all 300ms ease-in;
+    padding: 5px 10px;
+    border-radius: 2px;
+    
+}
+.close-bnt img{
+    width: 20px;
+    height: 20px;
+}
+.close-bnt:hover{
+    background-color: green;
+}
+.profile-update-wrapper form button{
+    padding: 12px 20px;
+    border: none;
+    background-color: green;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 5px 0px;
+    width: 100%;
+    transition: all 300ms ease-in;
+}
+.profile-update-wrapper form button:hover{
+    background-color: #1f4f10;
+}
+
+
+.profile-news-container{
+    padding: 2rem 0px;
+}
+.news-title{
+    display: flex;
+    justify-content: space-between;
+}
+.news-title h1{
+    color: green;
+    font-size: 25px;
+}
+.news-title button{
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+}
+.news-title button a{
+    color: green;
+    font-size: 17px;
+    text-decoration: underline;
+    transition: all 300ms ease-in;
+}
+.news-title button a:hover{
+    color:#fb0e20;
+}
+.profile-news-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:30px;
+}
+.profile-news-card{
+    width: 300px;
+}
+.news-photo{
+    width: 300px;
+    height: 200px;
+    background-color: #3a4837;
+    border-radius: 10px;
+}
+.news-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.news-text h2{
+    color:green;
+    font-size: 20px;
+}
+.news-text p{
+    color: rgba(0,0,0,0.7);
+    font-size: 18px;
+    font-weight: 500;
+}
+.news-text h4{
+    color: green;
+}
+.news-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.news-btn button{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all 300ms ease-in;
+}
+.news-btn button:hover{
+    transform: scale(1.05);
+}
+.news-btn .news-delete{
+    background-color: #fb0e20;
+    border:none;
+    color: #fff;
+    padding: 11.5px 20px ;
+}
+.news-btn .news-update{
+    background-color: transparent;
+    border: 1.5px solid green;
+    color: green;
+    padding: 10px 20px ;
+}
+.floating-btn-container{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    
+    /* width: 20px; */
+}
+.floating-btn{
+    background-color: green;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+.floating-btn:hover{
+    background-color: rgb(25, 58, 9);
+}
+
+/* ------------------------ latest page style --------------------------- */
+.latest-hero{
+    height: 90vh;
+    padding: 4rem 20px;
+    background-image:url("/static/LocalImages/news2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.latest-hero .search-wrapper {
+    padding: 4rem 20px;
+    display: flex;
+    justify-content: center;
+}
+.latest-hero .search-bar{
+    background-color: rgba(255,255,255,0.6);
+    box-shadow: 2px 0px 4px 2px rgba(0,0,0,0.6);
+    width: 600px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.search-bar input{
+    padding: 14px 20px;
+    border: none;
+    flex: 1;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+    font-weight: 500;
+}
+.search-bar input::placeholder{
+    font-weight: 500;
+    font-size: 16px;
+}
+.search-bar button{
+    padding: 14px 20px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: green;
+    transition: all 300ms ease-in;
+    cursor: pointer;
+    border-radius: 0px 20px 20px 0px;
+}
+.search-bar button:hover{
+    background-color: rgb(25, 58, 9);
+    color: #fff;
+}
+
+/* -------------------- cartegory page style ---------------------------- */
+.cartegory-container{
+    padding: 4rem 0px;
+}
+.cartegory-wrapper{
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+.cartegory{
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+.cart-card{
+    background-color: #1f4f10;
+    padding: 4px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+.cart-card:hover{
+    background-color: #1f2d23;
+}
+.cart-card h2{
+    color: #fff;
+    line-height: 10px;
+    font-size: 20px;
+}
+
+footer .subscriber-wrapper{
+    padding: 4rem;
+    background-color: #ddc6a7;
+}
+footer .subscriber-container{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.subscriber-form{
+    width: 600px;
+}
+.subscriber-form .input-wrap{
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.subscriber-form .input-wrap label{
+    color:green;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 0px;
+}
+.subscriber-form .input-wrap input{
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    font-size: 15px;
+    font-weight: 500;
+}
+.subscriber-form .form-btn{
+    padding:20px 0px 10px;
+    width: 100%;
+}
+.subscriber-form .form-btn button{
+    padding:12px 20px;
+    border:none;
+    background-color: green;
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 300ms ease-in;
+}
+.subscriber-form .form-btn button:hover{
+    background-color: rgb(25, 58, 9);
+}
+
+.subcriber-text p{
+    font-size:16px;
+    color:#333;
+    font-weight: 500;
+}
+
+
+/* -------------------- news details page style ---------------------------- */
+.news-page-container{
+    padding: 4rem 2rem 2rem;
+    display: flex;
+    gap: 20px;
+}
+.news-container{
+    /* width: 600px; */
+    flex: 1;
+    padding-bottom: 1rem;
+}
+.news-page img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #1f2d23;
+}
+.news-text h2{
+    color: green;
+    line-height: 25px;
+}
+.news-text h4{
+    color:rgba(0,0,0,0.6);
+    line-height: 10px;
+}
+.news-text p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* ----------------------- auth pages styles ----------------------- */
+.auth-wrapper{
+    width: 100%;
+    height: 97.5vh;
+    background-color: #ddc6a7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.auth-text h2{
+    color: green;
+}
+.input-wrapper{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.auth-form{
+    width: 500px;
+}
+.auth-wrapper label{
+    color:green;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+.auth-wrapper input{
+    padding: 12px 20px ;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+.auth-wrapper .auth-btn{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.auth-wrapper .auth-btn button{
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+.auth-wrapper .auth-btn .active-btn{
+    background-color: green;
+    color: #fff;
+    padding: 12px 40px;
+    border: none;
+}
+.auth-wrapper .auth-btn .other-btn{
+    padding: 10px 40px;
+    border: 2px solid green;
+    background-color: transparent;
+}
+.auth-wrapper .auth-btn .other-btn a{
+    color: green;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ------------------ profile page styles ---------------------- */
+
+.profile-bar{
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    width: 100%;
+    /* padding: 0px 10px; */
+    justify-content: space-evenly;
+}
+.profile-bar .profile-logo p{
+    font-size: 20px;
+    font-weight: 600;
+    color:#fb0e20;
+}
+
+.profile-container{
+    padding: 5rem 2rem 2rem;
+    /* background-color: #f4f4f4; */
+}
+.profile-info-container{
+    padding: 20px 20px 4rem;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+}
+.profile-card{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.profile-avatar{
+    background-color: #2c2259;
+    width: 150px;
+    border-radius: 50%;
+    /* aspect-ratio: 1/1; */
+    height: 150px;
+}
+.profile-avatar img{
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-text h2{
+    color: green;
+    line-height: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.profile-text h3{
+    color: rgba(0,0,0,0.6);
+    line-height: 10px;
+    text-transform: lowercase;
+}
+
+
+.profile-news-container{
+    padding: 2rem 0px;
+}
+.news-title{
+    display: flex;
+    justify-content: space-between;
+}
+.news-title h1{
+    color: green;
+    font-size: 25px;
+}
+.news-title button{
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+}
+.news-title button a{
+    color: green;
+    font-size: 17px;
+    text-decoration: underline;
+    transition: all 300ms ease-in;
+}
+.news-title button a:hover{
+    color:#fb0e20;
+}
+.profile-news-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:30px;
+}
+.profile-news-card{
+    width: 300px;
+}
+.news-photo{
+    width: 300px;
+    height: 200px;
+    background-color: #3a4837;
+    border-radius: 10px;
+}
+.news-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+.news-text h2{
+    color:green;
+    font-size: 20px;
+}
+.news-text p{
+    color: rgba(0,0,0,0.7);
+    font-size: 18px;
+    font-weight: 500;
+}
+.news-text h4{
+    color: green;
+}
+.news-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.news-btn button{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all 300ms ease-in;
+}
+.news-btn button:hover{
+    transform: scale(1.05);
+}
+.news-btn .news-delete{
+    background-color: #fb0e20;
+    border:none;
+    color: #fff;
+    padding: 11.5px 20px ;
+}
+.news-btn .news-update{
+    background-color: transparent;
+    border: 1.5px solid green;
+    color: green;
+    padding: 10px 20px ;
+}
+.floating-btn-container{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    
+    /* width: 20px; */
+}
+.floating-btn{
+    background-color: green;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+.floating-btn:hover{
+    background-color: rgb(25, 58, 9);
+}
+
+/* ---------------- create news pages style ------------------------------------------------- */
+
+.news-form-container{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+.news-form{
+    width: 700px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.news-form-title{
+    padding: 0px 20px ;
+}
+.news-form-title h2{
+    color: green;
+}
+.news-form .input{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.news-form .input label{
+    font-size: 20px;
+    color: green;
+    font-weight: 600;
+    padding: 0px 0px 7px;
+}
+.news-form .input input , textarea{
+    padding: 10px 20px;
+    border: 1.5px solid silver;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 5px;
+}
+.news-form .input textarea{
+    resize: none;
+    height: 200px;
+}
+.form-btn{
+    padding: 10px 20px 20px;
+}
+.form-btn button{
+    padding: 12px 20px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: green;
+    transition: all 300ms ease-in;
+    width: 100%;
+}
+.form-btn button:hover{
+    background-color: rgb(25, 58, 9);
+}
+
+
+
+.cartegory-list-wrapper{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    height: 90vh;
+}
+.cartegory-create{
+    width: 600px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+.cartegory-create-text h2{
+    font-size: 24px;
+    line-height: 10px;
+    color: #f80e20;
+}
+.cartegory-create-text h4{
+    font-size: 18px;
+    line-height: 10px;
+    color: #171717;
+}
+.cartegory-list{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.cartegory-list-card {
+    background-color: green;
+    padding: 4px 20px;
+    border-radius: 10px;
+}
+.cartegory-list-card p{
+    color: #fff;
+    line-height: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.create-cartegory{
+    padding: 20px 10px;
+    width: 500px;
+}
+.create-cartegory h2{
+    color: #f80e20;
+    line-height: 10px;
+    font-size: 18px;
+}
+.create-cartegory .input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+.create-cartegory .input label{
+    color:green;
+    font-size:20px;
+    font-weight: 500;
+    padding: 0px 0px 10px;
+}
+.create-cartegory .input input{
+    padding: 20px;
+    border: 1.5px solid green;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+.create-cartegory  form button{
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    background-color: rgb(25, 58, 9);
+    font-size: 16px;
+    border-radius: 10px;
+    transition: all 0.3ms ease-in;
+}
+.create-cartegory  form button:hover{
+    background-color: green;
+}
+
+/* ------------------- delete news styles-------------------------------- */
+.delete-wrapper{
+    padding: 2rem;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete-wrapper .delete-card{
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+}
+.delete-wrapper .delete-card .delete-photo{
+    background-color: #3a4837;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+}
+.delete-wrapper .delete-card .delete-photo img{
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.delete-wrapper .delete-card .delete-text h2{
+    color:green;
+}
+.delete-wrapper .delete-card .delete-text p{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.8);
+}
+.delete-wrapper .delete-card .delete-btn{
+    display: flex;
+    justify-content: space-between;
+}
+.delete-wrapper .delete-card .delete-btn .delete{
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: #fff;
+    font-size: 16px;
+    transition:all 300ms ease-in ;
+}
+
+.delete-wrapper .delete-card .delete-btn .delete:hover{
+    background-color: #f80e20;
+}
+.delete-wrapper .delete-card .delete-btn .cancel{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid green;
+    background-color: transparent;
+    color: green;
+    font-size: 16px;
+    transition:all 300ms ease-in ;
+}
+.delete-wrapper .delete-card .delete-btn .cancel:hover{
+    background-color: green;
+    color: #fff;
+}
+
+
+
+.footer-links{
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.link-card{
+    width: 400px;
+}
+.link-card h2{
+    color:red;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+.links a{
+    padding: 5px 0px;
+    color: green;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 300ms ease-in;
+}
+.links a:hover{
+    color:red;
+}
+
+.footer-bar{
+    padding: 0.25rem;
+}
+.footer-bar p{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: green;
+}
+
+
+

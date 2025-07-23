@@ -1,0 +1,128 @@
+{% extends "index.html" %}
+{% block content %}
+{% load static %}
+<header>
+    <nav class="profile-bar">
+        <div class="profile-logo">
+            <p>User Portal</p>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="{% url 'home' %}">News Page</a></li>
+                <li><a href="{% url 'choose-cart' %}">create news</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="profile-container">
+        <section class="profile-info-container">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    {% if request.user.Avatar %}
+                        <img src="{{request.user.Avatar.url}}" alt="">
+                    {% else %}
+                        <p>No Avatar</p>
+                    {% endif %}
+                </div>
+                <div class="profile-text">
+                    <h2>{{request.user.username}}</h2>
+                    <h3>{{request.user.email}}</h3>
+                    <div class="update-btn">
+                        <button id="open-update" >Update</button>
+                     </div>
+                     <div class="profile-update-wrapper" id="profile-update">
+                        <button class="close-bnt " id="close-update">
+                            <img src="{% static 'icon/cross.svg' %}" />
+                        </button>
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            {%csrf_token%}
+                            <div class="input">
+                                <label for="">Username</label>
+                                <input type="text" name="username" value="{{request.user.username}}" id="">
+                            </div>
+                            <div class="input">
+                                <label for="">Avatar</label>
+                                <input type="file" name="avatar" value="update" id="">
+                            </div>
+                            <button>Update</button>
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile-news-container">
+            <div class="news-title">
+                <h1>Your Latest News</h1>
+                <button>
+                    <a href="{% url 'choose-cart-latest' %}">Create Latest News</a>
+                </button>
+            </div>
+            <div class="profile-news-wrapper">
+                {% for item in latest %}
+                <div class="profile-news-card">
+                    <div class="news-photo">
+                        {% if item.Picture %}
+                        <img src="{{item.Picture.url}}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="news-text">
+                        <h2>{{item.Title|truncatewords:8}}</h2>
+                            <p>{{item.Story|truncatewords:10}}</p>
+                            <h4>{{item.Created|timesince}} ago</h4>
+                    </div>
+                    <div class="news-btn">
+                        <a href="{% url 'delete-latest' item.id %}">
+                            <button class="news-delete">Delete</button>
+                        </a>
+                        <a href="">
+                            <button class="news-update">Update</button>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <hr />
+        <section class="profile-news-container">
+            <div class="news-title">
+                <h1>Your news stories</h1>
+                <button>
+                    <a href="{% url 'choose-cart' %}">Create News</a>
+                </button>
+            </div>
+            <div class="profile-news-wrapper">
+                {% for item in news %}
+                <div class="profile-news-card">
+                    <div class="news-photo">
+                        {% if item.Picture %}
+                            <img src="{{item.Picture.url}}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="news-text">
+                        <h2>{{item.Title|truncatewords:8}}</h2>
+                            <p>{{item.Story|truncatewords:10}}</p>
+                            <h4>{{item.Created|timesince}} ago</h4>
+                    </div>
+                    <div class="news-btn">
+                        <a href="{% url 'delete-news' item.id %}">
+                            <button class="news-delete">Delete</button>
+                        </a>
+                        <a href="">
+                            <button class="news-update">Update</button>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="floating-btn-container">
+                <a href="{% url 'choose-cart-latest' %}">
+                <button class="floating-btn">
+                    Create Latest
+                </button>
+            </a>
+            </div>
+        </section>
+    </section>
+</main>
+{% endblock  %}

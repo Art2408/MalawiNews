@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block content %}
+<main>
+    <section class="cartegory-list-wrapper">
+        <section class="cartegory-create">
+            <div class="cartegory-create-text">
+                <h2>Choose new cartegory</h2>
+                <h4>Choose cartegory for news story </h4>
+            </div>
+            <div class="cartegory-list">
+                {% for cart in cartegories %}
+                    <a href="{% url 'create-latest' cart.id %}">
+                        <div class="cartegory-list-card">
+                            <p>{{cart.cartegory}}</p>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="create-cartegory">
+                <h2>Create New Cartegory</h2>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="input">
+                        <label for="">Name</label>
+                        <input type="text" name ="cartegory" placeholder="enter new cartegory name" required>
+                    </div>
+                    <button>Create</button>
+                </form>
+            </div>
+        </section>
+    </section>
+</main>
+{% endblock  %}

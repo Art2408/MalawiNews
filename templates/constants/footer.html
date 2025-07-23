@@ -1,0 +1,66 @@
+{% block content %}
+<footer>
+    <section class="subscriber-wrapper">
+      <div class="title">
+          <h1>Get Subscribe to NewsLatter</h1>
+      </div>
+      <div class="subscriber-container">
+        <div class="subscriber-form">
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="input-wrap">
+              <label for="">Name</label>
+              <input type="text" name="username" placeholder="Enter Full Name" />
+            </div>
+            <div class="input-wrap">
+              <label for="">Email</label>
+              <input type="email" name="user_email" placeholder="example@gmail.com" />
+            </div>
+            <div class="form-btn">
+              <button>Subscriber</button>
+            </div>
+          </form>
+        </div>
+        <div class="subcriber-text">
+          <div class="title">
+            <h2>Get Latest and Breaking News through email</h2>
+          </div>
+          <p>
+            Know what is happening in Malawi and abroad with accurate 
+            information about the events, case and stories
+          </p>
+          <p>Don't miss latest and breaking news , Get subscribe now </p>
+
+        </div>
+      </div>
+    </section>
+    <section class="footer-links">
+      <div class="link-card">
+          <h2>Quick Links</h2>
+        <div class="links">
+          <a href="">Home</a>
+          <a href="">Latest News</a>
+          <a href="">Cartegories</a>
+          <a href="">About Us</a>
+          <a href="">Log In</a>
+          <a href="">Create Account</a>
+          <a href="">Start Broadcasting</a>
+        </div>
+      </div>
+      <div class="link-card">
+          <h2>Cartegories</h2>
+        <div class="links">
+          <a href="">Politics</a>
+          <a href="">Sports</a>
+          <a href="">Business</a>
+          <a href="">Education</a>
+          <a href="">Agriculture</a>
+          <a href="">Entertainment</a>
+        </div>
+      </div>
+    </section>
+    <div class="footer-bar">
+      <p><span>&copy;</span> 2025 Malawi News All rights reserved</p>
+    </div>
+  </footer>
+{% endblock  %}

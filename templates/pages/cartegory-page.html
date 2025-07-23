@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+{% block content %}
+<header>
+    {% include "constants/navbar.html" %}
+</header>
+<main class="cartegory-container">
+    <section class="cartegory-wrapper">
+      <div class="title">
+        <h1>News Cartegories</h1>
+      </div>
+      <div class="cartegory">
+        {% for item in cartegory %}
+        <a href="{% url 'cartegory-news' item.id %}">
+          <div class="cart-card">
+            <h2>{{item.cartegory}}</h2>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    <section class="main-latest">
+      <div class="title">
+        <h1>News</h1>
+      </div>
+      <div class="main-latest-page">
+        <div class="main-latest-wrap">
+          {% for item in news  %}
+          <a href="{% url 'story-news' item.id %}">
+            <div class="main-latest-card">
+              <div class="latest-news-img">
+                <img src="{{item.Picture.url}}" alt="" />
+              </div>
+              <div class="text">
+                <h2>{{item.Title|truncatewords:10}}</h2>
+                <p>{{item.Story|truncatewords:50}}</p>
+                <h4>{{item.Created|timesince}} ago</h4>
+              </div>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include "constants/footer.html" %}
+{% endblock  %}
